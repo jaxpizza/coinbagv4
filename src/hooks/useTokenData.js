@@ -11,18 +11,12 @@ export const useTokenData = () => {
       try {
         console.log('Fetching data from API...');
         const response = await axios.get('/api/hello');
-        console.log('API response status:', response.status);
-        console.log('API response headers:', response.headers);
-        console.log('API response data:', response.data);
-        if (response.data && response.data.message) {
-          setTokenInfo(response.data);
-        } else {
-          throw new Error('Invalid data structure received from API');
-        }
+        console.log('API response:', response.data);
+        setTokenInfo(response.data);
         setLoading(false);
       } catch (err) {
         console.error('Error fetching token data:', err);
-        setError(err.response ? err.response.data : err.message);
+        setError(err.message || 'An error occurred');
         setLoading(false);
       }
     };
