@@ -41,7 +41,7 @@ const HomePage = () => {
   let volumeChartData = [];
   let dataWithEMA = [];
 
-  if (tokenInfo tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote.USD) {
+  if (tokenInfo && tokenInfo.quote && tokenInfo.quote.USD) {
     const mockData = generateMockHistoricalData(tokenInfo.quote.USD.price, 30);
     priceChartData = mockData.priceData;
     volumeChartData = mockData.volumeData;
@@ -72,7 +72,7 @@ const HomePage = () => {
         <div className="text-center text-teal-400 my-10">Loading data...</div>
       ) : error ? (
         <div className="text-center text-red-400 my-10">{JSON.stringify(error)}</div>
-      ) : tokenInfo tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote.USD ? (
+      ) : tokenInfo && tokenInfo.quote && tokenInfo.quote.USD ? (
         <>
           {/* Current Price and 24h Change */}
           <section className="py-8 px-4 bg-gray-800">
@@ -149,8 +149,8 @@ const HomePage = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { label: 'Market Cap', value: `${tokenInfo.quote.USD.market_cap.toLocaleString()}` },
-                  { label: 'Daily Volume', value: `${tokenInfo.quote.USD.volume_24h.toLocaleString()}` },
+                  { label: 'Market Cap', value: `$${tokenInfo.quote.USD.market_cap.toLocaleString()}` },
+                  { label: 'Daily Volume', value: `$${tokenInfo.quote.USD.volume_24h.toLocaleString()}` },
                   { label: 'Circulating Supply', value: tokenInfo.circulating_supply.toLocaleString() },
                 ].map((stat, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg shadow-xl p-6 text-center">
