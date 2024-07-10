@@ -8,15 +8,7 @@ import { useTokenData } from './hooks/useTokenData';
 
 const HomePage = () => {
   const { tokenInfo, loading, error } = useTokenData();
-  const [menuOpen, setMenuOpen] = React.useState(false);
-  const [scrollY, setScrollY] = React.useState(0);
   const [showEMA, setShowEMA] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const generateMockHistoricalData = (currentPrice, days) => {
     const priceData = [];
