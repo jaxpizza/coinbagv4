@@ -10,6 +10,7 @@ export const useTokenData = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('/api/token-data');
+        console.log('API response:', response.data);
         setTokenInfo(response.data);
         setLoading(false);
       } catch (err) {
