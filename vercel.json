@@ -13,7 +13,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/" },
-    { "src": "^/static/(.*)", "dest": "/static/" },
-    { "src": "^/(.*)", "dest": "/index.html" }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

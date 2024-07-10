@@ -9,12 +9,13 @@ export const useTokenData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log('Fetching data from API...');
         const response = await axios.get('/api/token-data');
         console.log('API response:', response.data);
         setTokenInfo(response.data);
         setLoading(false);
       } catch (err) {
-        console.error('Error fetching token data:', err.response ? err.response.data : err.message);
+        console.error('Error fetching token data:', err);
         setError(err.response ? err.response.data : err.message);
         setLoading(false);
       }
