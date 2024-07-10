@@ -1,5 +1,8 @@
 module.exports = (req, res) => {
+  console.log('API route hit');
+  res.setHeader('Content-Type', 'application/json');
   res.status(200).json({
+    message: 'API is working',
     id: 31798,
     name: "JENNER",
     symbol: "JENNER",
