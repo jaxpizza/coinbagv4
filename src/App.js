@@ -41,7 +41,7 @@ const HomePage = () => {
   let volumeChartData = [];
   let dataWithEMA = [];
 
-  if (tokenInfo) {
+  if (tokenInfo && tokenInfo.quote && tokenInfo.quote.USD) {
     const mockData = generateMockHistoricalData(tokenInfo.quote.USD.price, 30);
     priceChartData = mockData.priceData;
     volumeChartData = mockData.volumeData;
@@ -71,8 +71,8 @@ const HomePage = () => {
       {loading ? (
         <div className="text-center text-teal-400 my-10">Loading data...</div>
       ) : error ? (
-        <div className="text-center text-red-400 my-10">{typeof error === "string" ? error : JSON.stringify(error)}</div>
-      ) : tokenInfo ? (
+        <div className="text-center text-red-400 my-10">{JSON.stringify(error)}</div>
+      ) : tokenInfo && tokenInfo.quote && tokenInfo.quote.USD ? (
         <>
           {/* Current Price and 24h Change */}
           <section className="py-8 px-4 bg-gray-800">
@@ -149,8 +149,8 @@ const HomePage = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { label: 'Market Cap', value: `$${tokenInfo.quote.USD.market_cap.toLocaleString()}` },
-                  { label: 'Daily Volume', value: `$${tokenInfo.quote.USD.volume_24h.toLocaleString()}` },
+                  { label: 'Market Cap', value: `${tokenInfo.quote.USD.market_cap.toLocaleString()}` },
+                  { label: 'Daily Volume', value: `${tokenInfo.quote.USD.volume_24h.toLocaleString()}` },
                   { label: 'Circulating Supply', value: tokenInfo.circulating_supply.toLocaleString() },
                 ].map((stat, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg shadow-xl p-6 text-center">
@@ -162,7 +162,9 @@ const HomePage = () => {
             </div>
           </section>
         </>
-      ) : null}
+      ) : (
+        <div className="text-center text-red-400 my-10">Invalid data received from API</div>
+      )}
 
       {/* Footer */}
       <footer className="bg-gray-900 py-8 px-4">
