@@ -71,7 +71,7 @@ const HomePage = () => {
       {loading ? (
         <div className="text-center text-teal-400 my-10">Loading data...</div>
       ) : error ? (
-        <div className="text-center text-red-400 my-10">{error}</div>
+        <div className="text-center text-red-400 my-10">{typeof error === "string" ? error : JSON.stringify(error)}</div>
       ) : tokenInfo ? (
         <>
           {/* Current Price and 24h Change */}

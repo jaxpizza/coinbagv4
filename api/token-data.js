@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
 
     res.status(200).json(response.data.data[TOKEN_ID]);
   } catch (error) {
-    console.error('Error fetching token data:', error);
+    console.error('Error fetching token data:', error.response ? error.response.data : error.message);
     res.status(500).json({ error: 'Failed to fetch token data' });
   }
 };
