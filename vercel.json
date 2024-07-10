@@ -13,11 +13,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/" },
-    { "src": "/manifest.json", "dest": "/manifest.json" },
-    { "src": "/static/(.*)", "dest": "/static/" },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/logo192.png", "dest": "/logo192.png" },
-    { "src": "/logo512.png", "dest": "/logo512.png" },
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
