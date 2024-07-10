@@ -14,7 +14,11 @@ export const useTokenData = () => {
         console.log('API response status:', response.status);
         console.log('API response headers:', response.headers);
         console.log('API response data:', response.data);
-        setTokenInfo(response.data);
+        if (response.data && response.data.message) {
+          setTokenInfo(response.data);
+        } else {
+          throw new Error('Invalid data structure received from API');
+        }
         setLoading(false);
       } catch (err) {
         console.error('Error fetching token data:', err);

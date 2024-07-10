@@ -6,6 +6,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
