@@ -41,7 +41,7 @@ const HomePage = () => {
   let volumeChartData = [];
   let dataWithEMA = [];
 
-  if (tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD) {
+  if (tokenInfo tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote.USD) {
     const mockData = generateMockHistoricalData(tokenInfo.quote.USD.price, 30);
     priceChartData = mockData.priceData;
     volumeChartData = mockData.volumeData;
@@ -72,7 +72,7 @@ const HomePage = () => {
         <div className="text-center text-teal-400 my-10">Loading data...</div>
       ) : error ? (
         <div className="text-center text-red-400 my-10">{JSON.stringify(error)}</div>
-      ) : tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD ? (
+      ) : tokenInfo tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USDtokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.quote.USD tokenInfo.quote.USD ? (
         <>
           {/* Current Price and 24h Change */}
           <section className="py-8 px-4 bg-gray-800">
