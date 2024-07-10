@@ -13,7 +13,8 @@ export const useTokenData = () => {
         setTokenInfo(response.data);
         setLoading(false);
       } catch (err) {
-        setError(err.message);
+        console.error('Error fetching token data:', err);
+        setError(err.message || 'An error occurred while fetching data');
         setLoading(false);
       }
     };
