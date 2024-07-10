@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { Menu, X } from 'lucide-react';
 import BlogPage from './BlogPage';
 import SocialsDropdown from './SocialsDropdown';
@@ -8,7 +7,6 @@ import { useTokenData } from './hooks/useTokenData';
 
 const HomePage = () => {
   const { tokenInfo, loading, error } = useTokenData();
-  const [showEMA, setShowEMA] = React.useState(false);
 
   return (
     <div className="bg-gray-900 text-white min-h-screen font-sans">
