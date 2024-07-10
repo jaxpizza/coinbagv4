@@ -41,7 +41,7 @@ const HomePage = () => {
   let volumeChartData = [];
   let dataWithEMA = [];
 
-  if (tokenInfo && tokenInfo.quote && tokenInfo.quote.USD) {
+  if (tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.message) {
     const mockData = generateMockHistoricalData(tokenInfo.quote.USD.price, 30);
     priceChartData = mockData.priceData;
     volumeChartData = mockData.volumeData;
@@ -72,14 +72,14 @@ const HomePage = () => {
         <div className="text-center text-teal-400 my-10">Loading data...</div>
       ) : error ? (
         <div className="text-center text-red-400 my-10">{JSON.stringify(error)}</div>
-      ) : tokenInfo && tokenInfo.quote && tokenInfo.quote.USD ? (
+      ) : tokenInfo tokenInfo && tokenInfo.quote && tokenInfo.quote.USDtokenInfo && tokenInfo.quote && tokenInfo.quote.USD tokenInfo.message ? (
         <>
           {/* Current Price and 24h Change */}
           <section className="py-8 px-4 bg-gray-800">
             <div className="container mx-auto text-center">
               <h3 className="text-3xl font-bold mb-4 text-teal-400 glow">JENNER Token</h3>
               <p className="text-2xl font-bold text-teal-300">
-                Current Price: ${tokenInfo.quote.USD.price.toFixed(6)}
+                Test Message: ${tokenInfo.message}
                 <span className={`ml-4 ${tokenInfo.quote.USD.percent_change_24h >= 0 ? 'text-green-500' : 'text-red-500'}`}>
                   {tokenInfo.quote.USD.percent_change_24h.toFixed(2)}% (24h)
                 </span>
