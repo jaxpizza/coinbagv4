@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   const API_KEY = process.env.COINMARKETCAP_API_KEY;
   const TOKEN_ID = '31798'; // UCID for JENNER token
 
@@ -17,4 +17,4 @@ export default async function handler(req, res) {
     console.error('Error fetching token data:', error);
     res.status(500).json({ error: 'Failed to fetch token data' });
   }
-}
+};
